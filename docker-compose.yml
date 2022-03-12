@@ -24,6 +24,7 @@ services:
     environment:
       TZ: Asia/Tokyo
       RAILS_ENV: development
+      REDIS_URL: redis://redis:6379
     ports:
       - 3000:3000
     depends_on:
@@ -39,6 +40,15 @@ services:
       - 8080:3000
     depends_on:
       - api
+      - redis
+
+  redis:
+    image: redis:6.2
+    ports:
+      - 6379:6379
+    volumes:
+      - './data/redis:/data'
+    command: redis-server --appendonly yes
 
 volumes:
   db:
