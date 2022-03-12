@@ -29,5 +29,16 @@ services:
     depends_on:
       - db
 
+  frontend:
+    build: frontend/
+    command: yarn run dev
+    volumes:
+      - ./frontend:/app:cached
+    ports:
+      # ホストコンピュータのポート：Docker内のポート
+      - 8080:3000
+    depends_on:
+      - api
+
 volumes:
   db:
