@@ -1,0 +1,2 @@
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE DATABASE `nuxt_rails_firebase_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE DATABASE `nuxt_rails_firebase_test` DEFAULT CHARACTER SET `utf8mb4`[0m
