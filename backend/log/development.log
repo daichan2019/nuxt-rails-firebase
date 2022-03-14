@@ -1,2 +1,29 @@
   [1m[35m (4.5ms)[0m  [1m[35mCREATE DATABASE `nuxt_rails_firebase_development` DEFAULT CHARACTER SET `utf8mb4`[0m
   [1m[35m (5.0ms)[0m  [1m[35mCREATE DATABASE `nuxt_rails_firebase_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK('7201319334786434025', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220314124956)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7201319334786434025')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7201319334786434025', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220314124956)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7201319334786434025')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7201319334786434025', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220314124956)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7201319334786434025')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7201319334786434025', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220314124956)
+  [1m[35m (30.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) DEFAULT '' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, UNIQUE INDEX `index_users_on_uid` (`uid`))[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314124956')[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-14 12:57:07.132103', '2022-03-14 12:57:07.132103')[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('7201319334786434025')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
