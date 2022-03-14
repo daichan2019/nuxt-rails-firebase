@@ -27,3 +27,61 @@ Migrating to CreateUsers (20220314124956)
   [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('7201319334786434025')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/auth/users" for 172.18.0.1 at 2022-03-15 08:15:28 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::UsersController#create as */*
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 16912)
+
+
+  
+ArgumentError (BadRequest Parameter):
+  
+app/controllers/api/v1/auth/users_controller.rb:10:in `create'
+Started GET "/" for 172.18.0.1 at 2022-03-15 08:15:59 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.2ms | Allocations: 828)
+Completed 200 OK in 141ms (Views: 56.4ms | ActiveRecord: 0.0ms | Allocations: 7474)
+
+
+Started GET "/" for 172.18.0.1 at 2022-03-15 08:16:03 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 410)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1402)
+
+
+Started GET "/" for 172.18.0.1 at 2022-03-15 08:16:04 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started POST "/api/v1/auth/users" for 172.18.0.1 at 2022-03-15 08:16:10 +0900
+Processing by Api::V1::Auth::UsersController#create as */*
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 317)
+
+
+  
+ArgumentError (BadRequest Parameter):
+  
+app/controllers/api/v1/auth/users_controller.rb:10:in `create'
+Started POST "/api/v1/auth/users" for 172.18.0.1 at 2022-03-15 08:18:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::UsersController#create as */*
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'xFEKKYKWzUYiN9TjVIUSwm8XCMN2' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/users_controller.rb:14:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `uid`, `created_at`, `updated_at`) VALUES ('佐藤大地', 'xFEKKYKWzUYiN9TjVIUSwm8XCMN2', '2022-03-14 23:18:57.624897', '2022-03-14 23:18:57.624897')[0m
+  ↳ app/controllers/api/v1/auth/users_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/users_controller.rb:14:in `create'
+Completed 200 OK in 136ms (Views: 0.7ms | ActiveRecord: 21.0ms | Allocations: 25559)
+
+
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
