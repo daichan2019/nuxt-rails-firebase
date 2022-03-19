@@ -47,3 +47,7 @@ group :development do
 end
 
 gem 'firebase-auth-rails'
+
+gem 'jb'
+
+gem 'active_model_serializers'
